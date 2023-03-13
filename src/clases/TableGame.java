@@ -19,6 +19,7 @@ public class TableGame extends JPanel {
 		Graphics2D g2 = (Graphics2D)g;
 		g2.setColor(Color.WHITE);
 		draw(g2);
+		update();
 	}
 
 	public void draw (Graphics2D g) {
@@ -27,6 +28,6 @@ public class TableGame extends JPanel {
 	}
 
 	public void update () {
-		
+		ball.moveBall(getBounds());
 	}
 }
