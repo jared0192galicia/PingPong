@@ -6,7 +6,7 @@ public class Window extends JFrame {
 
 	private final int WIDTH = 800;
 	private final int HEIGTH = 500;
-	private Controls control;
+	private ControlThread control;
 	private TableGame table;
 	
 		public Window () {
@@ -14,9 +14,13 @@ public class Window extends JFrame {
 			this.setTitle("Pong");
 			this.setResizable(false);
 			this.setLocationRelativeTo(null);
+			this.setVisible(true);
 			table = new TableGame();
-			add(table);
-			control = new Controls(table);
-			control.start();
+			this.add(table);
+			addKeyListener(new Controls());
+			this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			control = new ControlThread(table);
+			 control.start();
+			//table.iterateGame();
 		}
 }
