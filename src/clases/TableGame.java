@@ -41,6 +41,14 @@ public class TableGame extends JPanel {
 		r2.moveRackedR2(getBounds());
 	}
 	
+	private boolean collision () {
+		boolean event;
+		
+		
+		
+		return true;
+	}
+	
 	public void iterateGame() {
 		while (true) {
 			try {

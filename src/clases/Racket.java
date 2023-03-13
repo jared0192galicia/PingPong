@@ -23,7 +23,7 @@ public class Racket {
 		if ((Controls.w) && (y > limits.getMinY())) {
 			y--;
 		}
-		if ((Controls.s) && (y < limits.getMaxY())) {
+		if ((Controls.s) && (y < (limits.getMaxY()) - HEIGTH)) {
 			y++;
 		}
 	}
@@ -31,8 +31,12 @@ public class Racket {
 		if ((Controls.up) && (y > limits.getMinY())) {
 			y--;
 		}
-		if ((Controls.down) && (y < limits.getMaxY())) {
+		if ((Controls.down) && (y < (limits.getMaxY() - HEIGTH))) {
 			y++;
 		}
 	}
 }
+
+
+
+
