@@ -36,17 +36,13 @@ public class TableGame extends JPanel {
 
 	// Update the value for each iteration before the use method repaint
 	public void update () {
-		ball.moveBall(getBounds());
+		ball.moveBall(getBounds(), collision(r1.getRacket()), collision(r2.getRacket()));
 		r1.moveRackedR1(getBounds());
 		r2.moveRackedR2(getBounds());
 	}
 	
-	private boolean collision () {
-		boolean event;
-		
-		
-		
-		return true;
+	private boolean collision (Rectangle2D r) {
+		return ball.getBall().intersects(r);
 	}
 	
 	public void iterateGame() {

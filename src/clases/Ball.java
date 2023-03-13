@@ -8,8 +8,8 @@ public class Ball {
 	// Properties the ball
 	private final int WIDTH = 15;
 	private final int HEIGTH = 15;
-	private int x;
-	private int y;
+	static int x;
+	static int y;
 	
 	// Razon the moving
 	private int dx = 1;
@@ -24,9 +24,19 @@ public class Ball {
 		return new Rectangle2D.Double(x, y, WIDTH, HEIGTH);
 	}
 	
-	public void moveBall (Rectangle limits) {
+	public void moveBall (Rectangle limits, boolean collisionR1, boolean collisionR2) {
 		x += dx;
 		y += dy;
+
+		// Rebut at collision with racket
+		if (collisionR1) {
+			dx = -dx;
+			x = 25;
+		}
+		if (collisionR2) {
+			dx = -dx;
+			x = 755;
+		}
 
 		if (x > limits.getMaxX()) {
 			dx = -dx;
