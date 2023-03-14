@@ -6,7 +6,7 @@ public class Window extends JFrame {
 
 	private final int WIDTH = 800;
 	private final int HEIGTH = 500;
-	private ControlThread control;
+	protected static ControlThread control;
 	private TableGame table;
 	
 		public Window () {
