@@ -3,6 +3,7 @@ package clases;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+// NO USED
 public class MenuWindow extends JFrame{
 
 	private JPanel panel = new JPanel();

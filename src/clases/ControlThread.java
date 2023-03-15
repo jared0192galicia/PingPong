@@ -9,6 +9,7 @@ public class ControlThread extends Thread {
 	
 	@Override
 	public void run() {
+		// repaint JFrame, for update positions in screen 
 		while (true) {
 			try {
 				Thread.sleep(4);

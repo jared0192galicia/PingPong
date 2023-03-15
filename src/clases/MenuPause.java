@@ -11,6 +11,7 @@ import javax.swing.JLabel;
 
 public class MenuPause extends JFrame implements ActionListener {
 
+	// Constants for the dimensions windows
 	private static final int WIDTH = 400;
 	private static final int HEIGTH = 300;
 	
@@ -18,6 +19,7 @@ public class MenuPause extends JFrame implements ActionListener {
 	private Button buttContinue;
 	
 	public MenuPause () {
+		// Set properties at window
 		this.setSize(WIDTH, HEIGTH);
 		this.setTitle("Pausa");
 		this.setResizable(false);
@@ -25,6 +27,7 @@ public class MenuPause extends JFrame implements ActionListener {
 		initComponents();
 	}
 	
+	// Method that creates the window components
 	public void initComponents() {
 		title = new JLabel("PAUSA");
 		title.setFont(new Font("Areal", Font.BOLD, 20));
@@ -39,10 +42,7 @@ public class MenuPause extends JFrame implements ActionListener {
 		this.add(title);
 	}
 	
-	public void eventButtContinue() {
-		
-	}
-
+	// EVENT that restart the game (resume in the thread)
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == buttContinue) {

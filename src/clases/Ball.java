@@ -11,10 +11,11 @@ public class Ball {
 	static int x;
 	static int y;
 	
-	// Razon the moving
+	// Reason the moving
 	private int dx = 1;
 	private int dy = 1;
 	
+	// Constructor
 	public Ball (int x, int y) {
 		this.x = x;
 		this.y = y;
@@ -24,6 +25,7 @@ public class Ball {
 		return new Rectangle2D.Double(x, y, WIDTH, HEIGTH);
 	}
 	
+	// Method that move the ball and count the points
 	public void moveBall (Rectangle limits, boolean collisionR1, boolean collisionR2) {
 		x += dx;
 		y += dy;

@@ -14,6 +14,7 @@ import javax.swing.JPanel;
 public class TableGame extends JPanel {
 	
 	Ball ball = new Ball(0, 36);
+	// Create attributes privates and protected
 	private JLabel label = new JLabel("Puntuación");
 	private JLabel point1 = new JLabel("1");
 	private JLabel point2 = new JLabel("2");
@@ -38,6 +39,7 @@ public class TableGame extends JPanel {
 		add(point2);
 	}
 
+	// Method for draw the components graphics
 	@Override
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
@@ -70,10 +72,12 @@ public class TableGame extends JPanel {
 		r2.moveRackedR2(getBounds());
 	}
 	
+	// Return true if exist collision between ball and rackets
 	private boolean collision (Rectangle2D r) {
 		return ball.getBall().intersects(r);
 	}
 	
+	// no implements
 	public void iterateGame() {
 		while (true) {
 			try {

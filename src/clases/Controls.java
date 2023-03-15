@@ -6,6 +6,7 @@ import java.awt.event.KeyEvent;
 
 public class Controls extends KeyAdapter {
 
+	// Variables for the press keys
 	static boolean w;
 	static boolean s;
 	static boolean up;
@@ -18,6 +19,7 @@ public class Controls extends KeyAdapter {
 		menuPause = new MenuPause();
 	}
 	
+	// identifies the keys pressed
 	@Override
 	public void keyPressed (KeyEvent e) {
 		int code = e.getKeyCode();
@@ -46,6 +48,7 @@ public class Controls extends KeyAdapter {
 		}
 	}
 
+//	identifies the keys released
 	@Override
 	public void keyReleased (KeyEvent e) {
 		int code = e.getKeyCode();
