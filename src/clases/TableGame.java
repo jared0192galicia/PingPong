@@ -21,7 +21,7 @@ public class TableGame extends JPanel {
 	protected static int pointL = 0;
 	// Create Rackets for the game
 	Racket r1 = new Racket(10, 200);
-	Racket r2 = new Racket((794 - 20 - Racket.WIDTH), 200);
+	Racket r2 = new Racket((794 - 10 - Racket.WIDTH), 200);
 	
 	public TableGame () {
 		setBackground(Color.BLACK);

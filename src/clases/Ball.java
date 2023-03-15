@@ -16,7 +16,7 @@ public class Ball {
 	private int dy = 1;
 	
 	public Ball (int x, int y) {
-		this.x	 = x;
+		this.x = x;
 		this.y = y;
 	}
 	
@@ -38,16 +38,24 @@ public class Ball {
 			x = 755;
 		}
 
+		
+		// Limits the moving for Ball
 		if (x > limits.getMaxX()) {
 			dx = -dx;
+			System.out.println("Punto mas izq");
+			TableGame.pointL++;
 		}
 		if (y > limits.getMaxY()) {
 			dy = -dy;
 		}
+		
+		// Change direction in borders
 		if (x < 0) {
 			dx = -dx;
+			System.out.println("Punto mas der");
+			TableGame.pointR++;
 		}
-		if (y < 0) {
+		if (y < 35) {
 			dy = -dy;
 		}
 	}
